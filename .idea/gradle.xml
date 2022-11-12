@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Exercisess" />
+        <option name="gradleJvm" value="temurin-11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Exercisess" />
+            <option value="$PROJECT_DIR$/Exercisess/SoupIU" />
+            <option value="$PROJECT_DIR$/Exercisess/advanced-tests" />
+            <option value="$PROJECT_DIR$/Exercisess/basic-tests" />
+            <option value="$PROJECT_DIR$/Exercisess/code-coverage" />
+            <option value="$PROJECT_DIR$/Exercisess/collections" />
+            <option value="$PROJECT_DIR$/Exercisess/collections-advanced" />
+            <option value="$PROJECT_DIR$/Exercisess/cucumber" />
+            <option value="$PROJECT_DIR$/Exercisess/google-selenium" />
+            <option value="$PROJECT_DIR$/Exercisess/intro" />
+            <option value="$PROJECT_DIR$/Exercisess/ode-coverage" />
+            <option value="$PROJECT_DIR$/Exercisess/rest-api" />
+            <option value="$PROJECT_DIR$/Exercisess/selenium" />
+            <option value="$PROJECT_DIR$/Exercisess/soup-app" />
+            <option value="$PROJECT_DIR$/Exercisess/spring-basic" />
+            <option value="$PROJECT_DIR$/Exercisess/stream" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/soap-app" />
+        <option name="gradleJvm" value="temurin-11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/soap-app" />
+            <option value="$PROJECT_DIR$/soap-app/ta-example-soap" />
+            <option value="$PROJECT_DIR$/soap-app/task_app_backend" />
+            <option value="$PROJECT_DIR$/soap-app/task_app_frontend-master" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

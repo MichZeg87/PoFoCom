@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.collections.adv.exercises.dictionary.DictionaryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-01-26T21:13:19" hostname="DESKTOP-435D891" time="0.083">
+  <properties/>
+  <testcase name="testAddWord()" classname="com.kodilla.collections.adv.exercises.dictionary.DictionaryTestSuite" time="0.069"/>
+  <testcase name="testFindEnglishWords()" classname="com.kodilla.collections.adv.exercises.dictionary.DictionaryTestSuite" time="0.001"/>
+  <testcase name="testFindingEnglishWords_withPartOfSpeech()" classname="com.kodilla.collections.adv.exercises.dictionary.DictionaryTestSuite" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cash Withdrawal" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-01-23T16:21:47" hostname="DESKTOP-435D891" time="0.044">
+  <properties/>
+  <testcase name="Successful withdrawal from a wallet in credit" classname="Cash Withdrawal" time="0.012"/>
+  <testcase name="Successful withdrawal more samples" classname="Cash Withdrawal" time="0.009"/>
+  <testcase name="Successful withdrawal more samples" classname="Cash Withdrawal" time="0.015"/>
+  <testcase name="Successful withdrawal more samples" classname="Cash Withdrawal" time="0.007"/>
+  <system-out><![CDATA[The balance is: $200
+The balance is: $200
+You don`t have enough money
+The balance is: $170
+The balance is: $100
+You don`t have enough money
+The balance is: $300
+You don`t have enough money
+The balance is: $0
+You don`t have enough money
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

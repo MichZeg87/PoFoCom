@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Prevent users from taking out more money than their wallet contains" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-23T16:21:47" hostname="DESKTOP-435D891" time="0.014">
+  <properties/>
+  <testcase name="User tries to take out more money than their balance" classname="Prevent users from taking out more money than their wallet contains" time="0.014"/>
+  <system-out><![CDATA[The balance is: $100
+The balance is: $100
+The balance is: $100
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

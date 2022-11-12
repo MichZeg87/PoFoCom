@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Display balance" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-23T16:21:47" hostname="DESKTOP-435D891" time="0.203">
+  <properties/>
+  <testcase name="User checks the balance of their wallet" classname="Display balance" time="0.203"/>
+  <system-out><![CDATA[The balance is: $200
+The balance is: $200
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

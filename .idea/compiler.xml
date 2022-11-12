@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Remind_password" />
+        <module name="Selenium" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="advanced-tests" target="11" />
+      <module name="com.com.inheritance.kodilla.Portfolio" target="11" />
+      <module name="com.com.inheritance.kodilla.Portfolio.main" target="11" />
+      <module name="com.com.inheritance.kodilla.Portfolio.test" target="11" />
+      <module name="Exercises" target="18" />
+      <module name="Exercisess" target="18" />
+      <module name="Exercisess.main" target="18" />
+      <module name="Exercisess.test" target="18" />
+      <module name="Portfolio.kodilla-advanced-tests.main" target="11" />
+      <module name="Portfolio.kodilla-advanced-tests.test" target="11" />
+      <module name="Portfolio.kodilla-basic-tests.main" target="11" />
+      <module name="Portfolio.kodilla-basic-tests.test" target="11" />
+      <module name="Portfolio.kodilla-code-coverage.main" target="11" />
+      <module name="Portfolio.kodilla-code-coverage.test" target="11" />
+      <module name="Portfolio.kodilla-collections-advanced.main" target="1.8" />
+      <module name="Portfolio.kodilla-collections-advanced.test" target="1.8" />
+      <module name="Portfolio.kodilla-collections.main" target="11" />
+      <module name="Portfolio.kodilla-collections.test" target="11" />
+      <module name="Portfolio.kodilla-cucumber.main" target="1.8" />
+      <module name="Portfolio.kodilla-cucumber.test" target="1.8" />
+      <module name="Portfolio.kodilla-google-selenium.main" target="1.8" />
+      <module name="Portfolio.kodilla-google-selenium.test" target="1.8" />
+      <module name="Portfolio.kodilla-intro.main" target="11" />
+      <module name="Portfolio.kodilla-intro.test" target="11" />
+      <module name="Portfolio.kodilla-rest-api.main" target="1.8" />
+      <module name="Portfolio.kodilla-rest-api.test" target="1.8" />
+      <module name="Portfolio.kodilla-selenium.main" target="11" />
+      <module name="Portfolio.kodilla-selenium.test" target="11" />
+      <module name="Portfolio.kodilla-spring-basic.main" target="1.8" />
+      <module name="Portfolio.kodilla-spring-basic.test" target="1.8" />
+      <module name="Portfolio.kodilla-stream.main" target="11" />
+      <module name="Portfolio.kodilla-stream.test" target="11" />
+      <module name="Portfolio.soup-app.main" target="11" />
+      <module name="Portfolio.soup-app.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Remind_password" options="" />
+    </option>
+  </component>
+</project>

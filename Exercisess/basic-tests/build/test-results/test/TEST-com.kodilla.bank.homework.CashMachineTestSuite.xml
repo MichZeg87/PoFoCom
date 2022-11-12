@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.bank.homework.CashMachineTestSuite" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-01-25T19:56:51" hostname="DESKTOP-435D891" time="0.018">
+  <properties/>
+  <testcase name="shouldCalculateSumOfCredits()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.001"/>
+  <testcase name="shouldCalculateNumberOfDeposits()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.001"/>
+  <testcase name="shouldCalculateNumberOfCredits()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.0"/>
+  <testcase name="shouldAddTwoElementsToArray()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.0"/>
+  <testcase name="shouldReturnZeroWhenNotEnoughDeposit()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.0"/>
+  <testcase name="shouldHaveZeroLength()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.001"/>
+  <testcase name="shouldCalculateSumOfDeposits()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.001"/>
+  <testcase name="shouldCalculateBalance()" classname="com.kodilla.bank.homework.CashMachineTestSuite" time="0.007"/>
+  <system-out><![CDATA[1
+2
+3
+4
+5
+1
+2
+3
+1
+2
+3
+1
+2
+1
+2
+1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
