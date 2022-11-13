@@ -1,4 +1,4 @@
-package template.uatzone;
+package template.uat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,18 +10,18 @@ import template.utils.FindValue;
 import java.time.Duration;
 import java.util.List;
 
-public class SKColumnsName extends AbstractWebDriver {
+public class ColumnsName extends AbstractWebDriver {
 
     chooseMenu chooseMenu = new chooseMenu(driver, wait);
     FindValue findValue = new FindValue(driver,wait);
-    SKGrid skGrid = new SKGrid(driver, wait);
+    Grid grid = new Grid(driver, wait);
 
     @FindBy (xpath = "//*[@id=]/thead/tr/th")
     List<WebElement> listGridColumnName1;
     @FindBy (xpath = "//*[@id=]/thead/tr/th")
     List<WebElement> listGridColumnName2;
 
-    public SKColumnsName(WebDriver driver, WebDriverWait wait) {
+    public ColumnsName(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
         PageFactory.initElements(this.driver, this);
     }
@@ -49,7 +49,7 @@ public class SKColumnsName extends AbstractWebDriver {
     public List<String> formGrid2() {
         chooseMenu.chooseMenuM();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-        return findValue.addGridHeaderToList(skGrid.card4, 9, listGridColumnName2, 1);
+        return findValue.addGridHeaderToList(grid.card4, 9, listGridColumnName2, 1);
     }
 
 

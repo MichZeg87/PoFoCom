@@ -1,4 +1,4 @@
-package template.uatzone;
+package template.uat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,9 +11,9 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
-public class SKForm extends AbstractWebDriver {
+public class Form extends AbstractWebDriver {
 
-    public SKForm(WebDriver driver, WebDriverWait wait) {
+    public Form(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
         PageFactory.initElements(this.driver, this);
     }
@@ -22,7 +22,7 @@ public class SKForm extends AbstractWebDriver {
     chooseMenu chooseMenu = new chooseMenu(driver, wait);
 
     @FindBy (xpath = "/html/body/header/a[3]")
-    WebElement breadcrumbUczestnictw;
+    WebElement breadcrumb;
 
     public Map<Integer, List<String>> menu11() {
         chooseMenu.getMenu21Hover();

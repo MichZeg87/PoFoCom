@@ -9,11 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.ContactAccessRole;
-import template.crm.CrmAllTables;
-import template.crm.AdvancedSearch;
-import template.crm.view.CRMView;
-import template.uatzone.*;
+import template.db.ContactAccessRole;
+import template.db.DbAllTables;
+import template.db.AdvancedSearch;
+import template.db.view.DbView;
+import template.uat.*;
 import template.utils.DebugUtils;
 import java.time.Duration;
 import java.util.*;
@@ -36,18 +36,18 @@ public class CompareDataTests {
     static WebDriverWait wait;
     Logging logging = new Logging(driver, wait);
     chooseMenu chooseMenu = new chooseMenu(driver, wait);
-    SKTable skTable = new SKTable(driver, wait);
+    Table table = new Table(driver, wait);
     DebugUtils debugUtils = new DebugUtils();
     AdvancedSearch search = new AdvancedSearch(driver, wait);
     CheckMenuExist isMenuDisplay = new CheckMenuExist(driver, wait);
     ContactAccessRole crmMenus = new ContactAccessRole(driver, wait);
-    SKForm skForm = new SKForm(driver, wait);
-    CrmAllTables crmAllTables = new CrmAllTables(driver, wait);
+    Form form = new Form(driver, wait);
+    DbAllTables crmAllTables = new DbAllTables(driver, wait);
     static List<String> windowHandles = new ArrayList<>();
     static List<String> menuList = new ArrayList<>();
     Set<String> menuSet = new HashSet<>();
-    SKAllMenus skAllMenus = new SKAllMenus(driver, wait);
-    CRMView crmView = new CRMView(driver, wait);
+    AllMenus allMenus = new AllMenus(driver, wait);
+    DbView dbView = new DbView(driver, wait);
 
     public void compareSets(String menuName, HashSet<List<String>> sk, HashSet<List<String>> crm) {
         if (menuList.contains(menuName)) {
@@ -90,11 +90,10 @@ public class CompareDataTests {
     @Order(1)
     @CsvFileSource(resources = "/test.csv", numLinesToSkip = 1)
     void setup(String domain, String account, String email, String id, String pass) throws InterruptedException {
-    id.toLowerCase(Locale.ROOT);
     driver.get("http://"+ domain +"/logowanie.aspx");
     driver.manage().window().maximize();
-    logging.crmLoggingNewTab();
-    driver.get(logging.crmSearch);
+    logging.loggingNewTab();
+    driver.get(logging.search);
     search.changeAllAccounts(account);
     driver.getWindowHandles().forEach(w-> {
             driver.switchTo().window(w);
@@ -119,7 +118,7 @@ public class CompareDataTests {
     @Order(3)
     public void atest() throws InterruptedException {
         System.out.println( menuList.size());
-        skTable.mapMenu34();
+        table.mapMenu34();
         driver.switchTo().window(windowHandles.get(1));
         System.out.println(menuList.get(1));
         driver.switchTo().window(windowHandles.get(0));
@@ -131,15 +130,15 @@ public class CompareDataTests {
     driver.get("");
     logging.logIn("", "");
         driver.manage().window().maximize();
-    skAllMenus.allTables();
-    Assertions.assertEquals(crmAllTables.getEntityMap(), skAllMenus.getMenuMap());
+    allMenus.allTables();
+    Assertions.assertEquals(crmAllTables.getEntityMap(), allMenus.getMenuMap());
 
     }
     @Test
     @Order(6)
     public void compareTableMap() throws InterruptedException{
-        HashSet<List<String>> sk = new HashSet<>(skTable.mapMenu925().values());
-        HashSet<List<String>> crm = new HashSet<>(crmView.riskMap().values());
+        HashSet<List<String>> sk = new HashSet<>(table.mapMenu925().values());
+        HashSet<List<String>> crm = new HashSet<>(dbView.riskMap().values());
         try {
             Assertions.assertEquals(sk, crm);
         } catch (AssertionError e) {
@@ -153,7 +152,7 @@ public class CompareDataTests {
     @Test
     @Order(4)
     public void test() {
-        skTable.mapMenu34();
+        table.mapMenu34();
     }
 
 }

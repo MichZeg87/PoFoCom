@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.form.CRMForm;
-import template.uatzone.SKForm;
+import template.db.form.DbForm;
+import template.uat.Form;
 import template.utils.DebugUtils;
 
 import java.time.Duration;
@@ -27,8 +27,8 @@ public class FormTests {
     WebDriver driver = new ChromeDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     Logging logging = new Logging(driver, wait);
-    CRMForm crmForm = new CRMForm(driver, wait);
-    SKForm skForm = new SKForm(driver,wait);
+    DbForm dbForm = new DbForm(driver, wait);
+    Form form = new Form(driver,wait);
     DebugUtils debugUtils = new DebugUtils();
     String url = "";
 
@@ -49,8 +49,8 @@ public class FormTests {
 
     @Test
     public void compareMenu12AndUser() throws InterruptedException {
-        HashSet<List<String>> sK = new HashSet<>(skForm.menu12().values());
-        HashSet<List<String>> cRM = new HashSet<>(crmForm.activeUser().values());
+        HashSet<List<String>> sK = new HashSet<>(form.menu12().values());
+        HashSet<List<String>> cRM = new HashSet<>(dbForm.activeUser().values());
         try {
             Assertions.assertEquals(sK, cRM);
         } catch (AssertionError e) {
@@ -60,8 +60,8 @@ public class FormTests {
 
     @Test
     public void compareMenu11AndInspect() throws InterruptedException {
-        HashSet<List<String>> sK = new HashSet<>(skForm.menu11().values());
-        HashSet<List<String>> cRM = new HashSet<>(crmForm.inspectionsToBePerformed().values());
+        HashSet<List<String>> sK = new HashSet<>(form.menu11().values());
+        HashSet<List<String>> cRM = new HashSet<>(dbForm.inspectionsToBePerformed().values());
         try {
             Assertions.assertEquals(sK, cRM);
         } catch (AssertionError e) {

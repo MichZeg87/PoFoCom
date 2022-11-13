@@ -9,9 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.grid.CRMGrid;
-import template.crm.view.CRMView;
-import template.uatzone.SKGrid;
+import template.db.grid.DbGrid;
+import template.db.view.DbView;
+import template.uat.Grid;
 import template.utils.DebugUtils;
 import java.time.Duration;
 import java.util.HashSet;
@@ -27,9 +27,9 @@ public class GridTests {
     WebDriver driver = new ChromeDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     Logging logging = new Logging(driver, wait);
-    CRMView crmView = new CRMView(driver, wait);
-    CRMGrid crmGrid = new CRMGrid(driver, wait);
-    SKGrid skGrid = new SKGrid(driver, wait);
+    DbView dbView = new DbView(driver, wait);
+    DbGrid dbGrid = new DbGrid(driver, wait);
+    Grid grid = new Grid(driver, wait);
     DebugUtils debugUtils = new DebugUtils();
     String url = "";
 
@@ -54,8 +54,8 @@ public class GridTests {
 
     @Test
     public void compareGrid2AndActiveRisk() throws InterruptedException {
-        HashSet<List<String>> SK = new HashSet<>(skGrid.grid2().values());
-        HashSet<List<String>> CRM = new HashSet<>(crmGrid.activeRisk().values());
+        HashSet<List<String>> SK = new HashSet<>(grid.grid2().values());
+        HashSet<List<String>> CRM = new HashSet<>(dbGrid.activeRisk().values());
         try {
             Assertions.assertEquals(SK, CRM);
         } catch (AssertionError e) {
@@ -65,8 +65,8 @@ public class GridTests {
 
     @Test
     public void compareGrid3AndactiveVehicle() throws InterruptedException {
-        HashSet<List<String>> SK = new HashSet<>(skGrid.grid3().values());
-        HashSet<List<String>> CRM = new HashSet<>(crmGrid.activeVehicle().values());
+        HashSet<List<String>> SK = new HashSet<>(grid.grid3().values());
+        HashSet<List<String>> CRM = new HashSet<>(dbGrid.activeVehicle().values());
         try {
             Assertions.assertEquals(SK, CRM);
         } catch (AssertionError e) {

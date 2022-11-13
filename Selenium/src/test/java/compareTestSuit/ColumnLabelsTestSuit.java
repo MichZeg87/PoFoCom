@@ -9,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.ColumnLabels;
-import template.uatzone.SKColumnsName;
+import template.db.ColumnLabels;
+import template.uat.ColumnsName;
 import java.time.Duration;
 
 public class ColumnLabelsTestSuit {
@@ -22,7 +22,7 @@ public class ColumnLabelsTestSuit {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     Logging logging = new Logging(driver, wait);
     ColumnLabels columnLabels = new ColumnLabels(driver, wait);
-    SKColumnsName skColumnsName = new SKColumnsName(driver, wait);
+    ColumnsName columnsName = new ColumnsName(driver, wait);
     String url = "";
 
     @BeforeAll
@@ -46,16 +46,16 @@ public class ColumnLabelsTestSuit {
 
     @Test
     public void archiwalnePolisy() throws InterruptedException  {
-        Assertions.assertEquals(skColumnsName.menu2(), columnLabels.risksColumnsList());
+        Assertions.assertEquals(columnsName.menu2(), columnLabels.risksColumnsList());
     }
 
     @Test
     public void wygasajacePolisy() throws InterruptedException   {
-        Assertions.assertEquals(skColumnsName.menu52(), columnLabels.vehicleColumnList());
+        Assertions.assertEquals(columnsName.menu52(), columnLabels.vehicleColumnList());
     }
 
     @Test
     public void zakupionePolisy()  throws InterruptedException {
-        Assertions.assertEquals(skColumnsName.menu51(), columnLabels.risksViewColumnList());
+        Assertions.assertEquals(columnsName.menu51(), columnLabels.risksViewColumnList());
     }
 }

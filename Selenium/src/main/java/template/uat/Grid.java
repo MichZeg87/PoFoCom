@@ -1,4 +1,4 @@
-package template.uatzone;
+package template.uat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +10,9 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
-public class SKGrid extends AbstractWebDriver {
+public class Grid extends AbstractWebDriver {
 
-    public SKGrid(WebDriver driver, WebDriverWait wait) {
+    public Grid(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
     FindValue findValue = new FindValue(driver, wait);

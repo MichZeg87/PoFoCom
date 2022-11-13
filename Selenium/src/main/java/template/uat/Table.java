@@ -1,4 +1,4 @@
-package template.uatzone;
+package template.uat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -9,9 +9,9 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
-public class SKTable extends AbstractWebDriver {
+public class Table extends AbstractWebDriver {
 
-    public SKTable(WebDriver driver, WebDriverWait wait) {
+    public Table(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
         PageFactory.initElements(this.driver, this);
     }

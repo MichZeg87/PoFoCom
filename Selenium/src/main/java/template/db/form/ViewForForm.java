@@ -1,11 +1,11 @@
-package template.crm.form;
+package template.db.form;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import template.crm.view.GridHeader;
+import template.db.view.GridHeader;
 import template.utils.AbstractWebDriver;
 
 public class ViewForForm extends AbstractWebDriver {

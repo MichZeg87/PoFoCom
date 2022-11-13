@@ -1,7 +1,7 @@
-package template.crm.view;
+package template.db.view;
 
 import template.Logging;
-import template.crm.ChooseEntity;
+import template.db.ChooseEntity;
 import template.utils.AbstractWebDriver;
 import template.utils.Variables;
 import template.utils.FindValue;
@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.Map;
 
-public class CRMView extends AbstractWebDriver {
+public class DbView extends AbstractWebDriver {
 
-    public CRMView(WebDriver driver, WebDriverWait wait) {
+    public DbView(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
         PageFactory.initElements(this.driver, this);
     }
@@ -28,7 +28,7 @@ public class CRMView extends AbstractWebDriver {
 
 
     public Map<Integer, List<String>> riskMap() throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         chooseEntity.entity1();
         Thread.sleep(2000);
         gridHeader.risksTable();
@@ -37,7 +37,7 @@ public class CRMView extends AbstractWebDriver {
     }
 
     public Map<Integer, List<String>> bookMap() throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         chooseEntity.entity2();
         Thread.sleep(2000);
         gridHeader.bookTable();
@@ -45,7 +45,7 @@ public class CRMView extends AbstractWebDriver {
     }
 
     public Map<Integer, List<String>> inspectionMap() throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         chooseEntity.entity3();
         Thread.sleep(2000);
         gridHeader.vehicleInspectionTable();
@@ -53,7 +53,7 @@ public class CRMView extends AbstractWebDriver {
     }
 
     public Map<Integer, List<String>> userMap() throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         chooseEntity.entity4();
         Thread.sleep(2000);
         gridHeader.userTable();

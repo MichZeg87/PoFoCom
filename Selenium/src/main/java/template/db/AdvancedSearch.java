@@ -1,4 +1,4 @@
-package template.crm;
+package template.db;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

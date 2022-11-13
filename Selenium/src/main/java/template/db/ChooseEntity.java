@@ -1,4 +1,4 @@
-package template.crm;
+package template.db;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import template.crm.view.CRMView;
-import template.crm.view.GridHeader;
+import template.db.view.DbView;
+import template.db.view.GridHeader;
 import template.utils.AbstractWebDriver;
 import java.time.Duration;
 
@@ -120,36 +120,36 @@ public class ChooseEntity extends AbstractWebDriver {
         return new GridHeader(driver, wait);
     }
 
-    public CRMView entity5() {
+    public DbView entity5() {
         chooseSFA();
         payments.click();
         wait.until(loadingLocator);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
-    public CRMView entity6() {
+    public DbView entity6() {
         chooseSFA();
         risks.click();
         wait.until(loadingLocator); // czeka aż lading zniknie
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
-    public CRMView entity7(){
+    public DbView entity7(){
         chooseSFA();
         vehicles.click();
         wait.until(loadingLocator);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
-    public CRMView entity8(){
+    public DbView entity8(){
         chooseSFA();
         contracts.click();
         wait.until(loadingLocator);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
     public GridHeader entity9(){

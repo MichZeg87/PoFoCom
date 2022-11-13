@@ -1,13 +1,13 @@
-package template.crm;
+package template.db;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.form.CRMForm;
-import template.crm.grid.CRMGrid;
-import template.crm.view.CRMView;
-import template.crm.view.GridHeader;
+import template.db.form.DbForm;
+import template.db.grid.DbGrid;
+import template.db.view.DbView;
+import template.db.view.GridHeader;
 import template.utils.AbstractWebDriver;
 import template.utils.FindValue;
 import template.utils.Variables;
@@ -17,9 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CrmAllTables extends AbstractWebDriver {
+public class DbAllTables extends AbstractWebDriver {
 
-    public CrmAllTables(WebDriver driver, WebDriverWait wait) {
+    public DbAllTables(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
         PageFactory.initElements(this.driver, this);
     }
@@ -29,9 +29,9 @@ public class CrmAllTables extends AbstractWebDriver {
     Logging logging = new Logging(driver,wait);
     ChooseEntity chooseEntity = new ChooseEntity(driver, wait);
     GridHeader gridHeader = new GridHeader(driver, wait);
-    CRMView crmView = new CRMView(driver, wait);
-    CRMGrid crmGrid = new CRMGrid(driver, wait);
-    CRMForm crmForm = new CRMForm(driver, wait);
+    DbView dbView = new DbView(driver, wait);
+    DbGrid dbGrid = new DbGrid(driver, wait);
+    DbForm dbForm = new DbForm(driver, wait);
 
     Map<String, Collection<List<String>>> entityMap = new HashMap<>();
 
@@ -41,7 +41,7 @@ public class CrmAllTables extends AbstractWebDriver {
 
     public Map<Integer, List<String>> gridRiskMap() throws InterruptedException{
         Thread.sleep(2000);
-        crmGrid.activeRisk();
+        dbGrid.activeRisk();
         return findValue.allTableMapFromCrm(new Variables(100,100, 5,1,100
                 ,100,100,100,100));
     }
@@ -50,7 +50,7 @@ public class CrmAllTables extends AbstractWebDriver {
         if (crmMenu.getMenu().contains("")) {
             Thread.sleep(2000);
             gridHeader.bookTable();
-            entityMap.put("", findValue.allTableMapFromCrm(crmView.neutral).values());
+            entityMap.put("", findValue.allTableMapFromCrm(dbView.neutral).values());
             return entityMap;
         } else {
             return Collections.emptyMap();
@@ -61,8 +61,8 @@ public class CrmAllTables extends AbstractWebDriver {
     public Map<String, Collection<List<String>>> formInspectTable() throws InterruptedException{
         if (crmMenu.getMenu().contains("")) {
         Thread.sleep(2000);
-        crmForm.inspectionsToBePerformed();
-            entityMap.put("", findValue.allTableMapFromCrm(crmView.insp).values());
+        dbForm.inspectionsToBePerformed();
+            entityMap.put("", findValue.allTableMapFromCrm(dbView.insp).values());
             return entityMap;
         } else {
             return Collections.emptyMap();
@@ -72,7 +72,7 @@ public class CrmAllTables extends AbstractWebDriver {
     public Map<String, Collection<List<String>>> userFormMap() throws InterruptedException {
         if (crmMenu.getMenu().contains("")) {
             Thread.sleep(2000);
-            crmForm.activeUser();
+            dbForm.activeUser();
            entityMap.put("", findValue.allTableMapFromCrm(new Variables(
                    5, 100, 100, 1, 100, 100, 100, 100, 100)).values());
             return entityMap;
@@ -85,8 +85,8 @@ public class CrmAllTables extends AbstractWebDriver {
     public Map<Integer, List<String>> vehicleGrddMap() throws InterruptedException{
         if (crmMenu.getMenu().contains("")) {
             Thread.sleep(2000);
-           crmGrid.activeVehicle();
-            return findValue.allTableMapFromCrm(crmView.book);
+           dbGrid.activeVehicle();
+            return findValue.allTableMapFromCrm(dbView.book);
         }else {
             return Collections.emptyMap();
         }

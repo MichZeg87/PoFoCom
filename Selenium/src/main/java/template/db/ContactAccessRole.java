@@ -1,4 +1,4 @@
-package template.crm;
+package template.db;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.view.GridHeader;
+import template.db.view.GridHeader;
 import template.utils.AbstractWebDriver;
 import template.utils.FindValue;
 import java.time.Duration;
@@ -107,7 +107,7 @@ public class ContactAccessRole extends AbstractWebDriver {
     }
 
     public Set<String> crmMenuChecker (String login) throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         selectContactWithUniqueEmail(login);
         return menu;
     }

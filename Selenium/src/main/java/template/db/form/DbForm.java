@@ -1,19 +1,19 @@
-package template.crm.form;
+package template.db.form;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.ChooseEntity;
+import template.db.ChooseEntity;
 import template.utils.AbstractWebDriver;
 import template.utils.FindValue;
 import template.utils.Variables;
 import java.util.List;
 import java.util.Map;
 
-public class CRMForm extends AbstractWebDriver {
+public class DbForm extends AbstractWebDriver {
 
-    public CRMForm(WebDriver driver, WebDriverWait wait) {
+    public DbForm(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
         PageFactory.initElements(this.driver, this);
     }
@@ -33,7 +33,7 @@ public class CRMForm extends AbstractWebDriver {
 
 
     public Map<Integer, List<String>> inspectionsToBePerformed() throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         chooseEntity.entity7();
         viewForForm.vehicleInspection();
         return findValue.allTableMapFromCrm(neutral);
@@ -42,7 +42,7 @@ public class CRMForm extends AbstractWebDriver {
 
 
     public Map<Integer, List<String>> activeUser() throws InterruptedException {
-        logging.crmLoggingNewTab();
+        logging.loggingNewTab();
         chooseEntity.entity8();
         Thread.sleep(1000);
         viewForForm.user();

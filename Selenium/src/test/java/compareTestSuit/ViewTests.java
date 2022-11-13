@@ -10,9 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import template.Logging;
-import template.crm.view.CRMView;
-import template.uatzone.SKTable;
-import template.uatzone.chooseMenu;
+import template.db.view.DbView;
+import template.uat.Table;
+import template.uat.chooseMenu;
 import template.utils.DebugUtils;
 import java.time.Duration;
 import java.util.HashSet;
@@ -32,8 +32,8 @@ public class ViewTests {
     WebDriver driver = new ChromeDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     Logging logging = new Logging(driver, wait);
-    CRMView crmView = new CRMView(driver, wait);
-    SKTable skTable = new SKTable(driver, wait);
+    DbView dbView = new DbView(driver, wait);
+    Table table = new Table(driver, wait);
     DebugUtils debugUtils = new DebugUtils();
     chooseMenu chooseMenu = new chooseMenu(driver, wait);
 
@@ -53,15 +53,15 @@ public class ViewTests {
 
     @Test
     public void test2() throws InterruptedException{
-        HashSet<List<String>> sk = new HashSet<>(skTable.mapMenu4().values());
-        HashSet<List<String>> crm = new HashSet<>(crmView.bookMap().values());
+        HashSet<List<String>> sk = new HashSet<>(table.mapMenu4().values());
+        HashSet<List<String>> crm = new HashSet<>(dbView.bookMap().values());
         compare(sk, crm);
     }
 
     @Test
     public void test() throws InterruptedException {
-        HashSet<List<String>> sk = new HashSet<>(skTable.mapMenu34().values());
-        HashSet<List<String>> crm = new HashSet<>(crmView.bookMap().values());
+        HashSet<List<String>> sk = new HashSet<>(table.mapMenu34().values());
+        HashSet<List<String>> crm = new HashSet<>(dbView.bookMap().values());
         try {
             Assertions.assertEquals(sk, crm);
         } catch (AssertionError e) {
@@ -72,8 +72,8 @@ public class ViewTests {
     @Test
     public void porownanieAktywnePolisy()throws InterruptedException {
         if(!chooseMenu.getMenuH().isEmpty()) {
-            HashSet<List<String>> sk = new HashSet<>(skTable.mapMenu1().values());
-            HashSet<List<String>> crm = new HashSet<>(crmView.inspectionMap().values());
+            HashSet<List<String>> sk = new HashSet<>(table.mapMenu1().values());
+            HashSet<List<String>> crm = new HashSet<>(dbView.inspectionMap().values());
             try {
                 Assertions.assertEquals(sk, crm);
             } catch (AssertionError e) {

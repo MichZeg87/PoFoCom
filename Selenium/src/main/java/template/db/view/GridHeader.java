@@ -1,4 +1,4 @@
-package template.crm.view;
+package template.db.view;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -64,31 +64,31 @@ public class GridHeader extends AbstractWebDriver {
     @FindBy(id = "{}")
     WebElement inspect;
 
-    public CRMView risksTable() {
+    public DbView risksTable() {
         viewDropDown();
         risk.click();
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
-    public CRMView userTable() {
+    public DbView userTable() {
         viewDropDown();
         user.click();
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
-    public CRMView bookTable() {
+    public DbView bookTable() {
         viewDropDown();
         book.click();
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 
-    public CRMView vehicleInspectionTable() throws InterruptedException {
+    public DbView vehicleInspectionTable() throws InterruptedException {
         driver.switchTo().frame(iFrame);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         Thread.sleep(2000);
         savedView.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         inspect.click();
-        return new CRMView(driver, wait);
+        return new DbView(driver, wait);
     }
 }

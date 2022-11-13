@@ -1,4 +1,4 @@
-package template.uatzone;
+package template.uat;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -141,9 +141,9 @@ public class chooseMenu extends AbstractWebDriver {
         menuT.click();
     }
 
-    public SKTable chooseMenuEE() {
+    public Table chooseMenuEE() {
         menuEE.click();
-        return new SKTable(driver, wait);
+        return new Table(driver, wait);
     }
 
     public void chooseMenu21() {
@@ -158,18 +158,18 @@ public class chooseMenu extends AbstractWebDriver {
         menu32Hover.click();
     }
 
-    public SKTable chooseMenu3() {
+    public Table chooseMenu3() {
         action.moveToElement(menuEE).perform();
         wait.until(ExpectedConditions.visibilityOf(menuaHover));
         menuaHover.click();
-        return new SKTable(driver, wait);
+        return new Table(driver, wait);
     }
 
-    public SKTable chooseMenuZZ() {
+    public Table chooseMenuZZ() {
         action.moveToElement(menuEE).perform();
         wait.until(ExpectedConditions.visibilityOf(menuZZHover));
         menuZZHover.click();
-        return new SKTable(driver, wait);
+        return new Table(driver, wait);
     }
 
 

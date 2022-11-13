@@ -1,4 +1,4 @@
-package template.uatzone;
+package template.uat;
 
 import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;

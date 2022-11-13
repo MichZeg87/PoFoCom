@@ -4,7 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import template.uatzone.RandomPassGen;
+import template.uat.RandomPassGen;
 import template.utils.AbstractWebDriver;
 
 import java.io.FileOutputStream;
@@ -17,8 +17,8 @@ public class Logging extends AbstractWebDriver {
         PageFactory.initElements(this.driver, this);
     }
 
-    public  final String urlCrm = "";
-    public  final String crmSearch = "";
+    public  final String url = "";
+    public  final String search = "";
 
     FileOutputStream fos;
     RandomPassGen passGen = new RandomPassGen();
@@ -71,13 +71,13 @@ public class Logging extends AbstractWebDriver {
     @FindBy (xpath = "//*[@id=\"navTourCloseButtonImage\"]/img")
     WebElement closeCoNowego;
 
-    public void crmLoggingNewTab() {
+    public void loggingNewTab() {
         driver.switchTo().newWindow(WindowType.TAB); // otwiera nową kartę i przełącza się do niej
-        driver.get(urlCrm);
-        crmLogging();
+        driver.get(url);
+        logging();
     }
 
-    public void crmLogging() {
+    public void logging() {
         detailsButton.click();
         proceedLink.click();
         driver.switchTo().frame(iFrame);
@@ -85,8 +85,8 @@ public class Logging extends AbstractWebDriver {
         driver.switchTo().defaultContent(); // powrót z iframe do strony podstawowej
     }
 
-    public void openCrm() {
-        driver.get(urlCrm);
-        crmLogging();
+    public void open() {
+        driver.get(url);
+        logging();
     }
 }

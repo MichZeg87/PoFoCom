@@ -1,4 +1,4 @@
-import template.uatzone.RandomPassGen;
+import template.uat.RandomPassGen;
 
 import java.io.*;
 
