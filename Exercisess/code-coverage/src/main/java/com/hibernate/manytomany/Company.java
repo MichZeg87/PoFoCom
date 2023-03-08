@@ -1,4 +1,4 @@
-package com.kodilla.hibernate.manytomany;
+package com.hibernate.manytomany;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

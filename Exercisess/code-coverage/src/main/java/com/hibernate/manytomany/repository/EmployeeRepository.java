@@ -1,6 +1,6 @@
-package com.kodilla.hibernate.manytomany.repository;
+package com.hibernate.manytomany.repository;
 
-import com.kodilla.hibernate.manytomany.Employee;
+import com.hibernate.manytomany.Employee;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
