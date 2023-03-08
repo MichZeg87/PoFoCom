@@ -1,4 +1,4 @@
-package com.kodilla.parametrized_tests.homework;
+package com.parametrized_tests.homework;
 
 import java.util.Collections;
 import java.util.HashSet;

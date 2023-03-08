@@ -1,10 +1,10 @@
-package com.kodilla.collections.adv.exercises.dictionary.homework;
+package com.collections.adv.exercises.dictionary.homework;
 
-import com.kodilla.collections.adv.exercises.dictionary.EnglishWord;
-import com.kodilla.collections.adv.exercises.dictionary.PartOfSpeech;
-import com.kodilla.collections.adv.exercises.homework.Flight;
-import com.kodilla.collections.adv.exercises.homework.FlightFinder;
-import com.kodilla.collections.adv.exercises.homework.FlightRepository;
+import com.collections.adv.exercises.dictionary.EnglishWord;
+import com.collections.adv.exercises.dictionary.PartOfSpeech;
+import com.collections.adv.exercises.homework.Flight;
+import com.collections.adv.exercises.homework.FlightFinder;
+import com.collections.adv.exercises.homework.FlightRepository;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

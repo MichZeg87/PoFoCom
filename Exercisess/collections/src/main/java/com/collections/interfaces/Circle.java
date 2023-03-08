@@ -1,4 +1,4 @@
-package com.kodilla.collections.interfaces;
+package com.collections.interfaces;
 
 import java.util.Objects;
 

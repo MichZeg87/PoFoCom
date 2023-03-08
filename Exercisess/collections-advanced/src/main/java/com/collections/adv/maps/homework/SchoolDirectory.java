@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.maps.homework;
+package com.collections.adv.maps.homework;
 
 import com.kodilla.collections.adv.maps.complex.Grades;
 import com.kodilla.collections.adv.maps.complex.Student;

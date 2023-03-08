@@ -1,4 +1,4 @@
-package com.kodilla.mockito;
+package com.mockito;
 
 public interface MobilePhone {
     boolean needsCharging();

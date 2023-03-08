@@ -1,4 +1,4 @@
-package com.kodilla.parametrized_tests.homework;
+package com.parametrized_tests.homework;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

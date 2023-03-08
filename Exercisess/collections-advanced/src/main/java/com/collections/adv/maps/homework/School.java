@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.maps.homework;
+package com.collections.adv.maps.homework;
 
 import java.util.ArrayList;
 import java.util.List;

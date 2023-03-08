@@ -1,6 +1,6 @@
-package com.kodilla.collections.adv.exercises.dictionary;
+package com.collections.adv.exercises.dictionary;
 
-import com.kodilla.collections.adv.exercises.homework.FlightRepository;
+import com.collections.adv.exercises.homework.FlightRepository;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

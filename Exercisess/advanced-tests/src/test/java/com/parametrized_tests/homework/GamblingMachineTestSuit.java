@@ -1,4 +1,4 @@
-package com.kodilla.parametrized_tests.homework;
+package com.parametrized_tests.homework;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;

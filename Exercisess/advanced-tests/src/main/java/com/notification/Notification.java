@@ -1,4 +1,4 @@
-package com.kodilla.notification;
+package com.notification;
 
 public interface Notification {
 }

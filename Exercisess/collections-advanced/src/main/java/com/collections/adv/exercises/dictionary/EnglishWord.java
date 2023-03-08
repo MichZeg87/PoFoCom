@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.exercises.dictionary;
+package com.collections.adv.exercises.dictionary;
 
 import java.util.Objects;
 

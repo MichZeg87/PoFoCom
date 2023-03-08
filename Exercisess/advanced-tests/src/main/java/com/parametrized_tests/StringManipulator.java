@@ -1,4 +1,4 @@
-package com.kodilla.parametrized_tests;
+package com.parametrized_tests;
 
 public class StringManipulator {
     public String reverseWithLowerCase(String input) {

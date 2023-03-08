@@ -1,4 +1,4 @@
-package com.kodilla.collections.interfaces;
+package com.collections.interfaces;
 
 public class InterfaceDemoShape { // klasa pokazująca jak zmienić klase interfaceDemo na interface z obsługą interfejsu
     public static void main(String[] args) {

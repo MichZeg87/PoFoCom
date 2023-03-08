@@ -1,9 +1,9 @@
-package com.kodilla.collections.arrays;
+package com.collections.arrays;
 
-import com.kodilla.collections.interfaces.Circle;
-import com.kodilla.collections.interfaces.Shape;
-import com.kodilla.collections.interfaces.Square;
-import com.kodilla.collections.interfaces.Triangle;
+import com.collections.interfaces.Circle;
+import com.collections.interfaces.Shape;
+import com.collections.interfaces.Square;
+import com.collections.interfaces.Triangle;
 
 public class ShapeUtils {
     public static void displayShapeInfo(Shape shape) {

@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.immutable.special.homework;
+package com.collections.adv.immutable.special.homework;
 
 public class Book {
     private String title;

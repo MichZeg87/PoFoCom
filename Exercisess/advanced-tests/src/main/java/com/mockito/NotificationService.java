@@ -1,7 +1,7 @@
-package com.kodilla.mockito;
+package com.mockito;
 
-import com.kodilla.notification.Client;
-import com.kodilla.notification.Notification;
+import com.notification.Client;
+import com.notification.Notification;
 
 import java.util.HashSet;
 import java.util.Set;

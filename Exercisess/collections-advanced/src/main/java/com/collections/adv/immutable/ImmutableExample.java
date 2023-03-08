@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.immutable;
+package com.collections.adv.immutable;
 
 public class ImmutableExample {
     public static void main(String[] args) {
