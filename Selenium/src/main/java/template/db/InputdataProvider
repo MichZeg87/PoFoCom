@@ -15,20 +15,20 @@ public class InputDataPreparer extends AbstractWebDriver {
 
     ValueChecker values = new ValueChecker(driver, wait);
     Actions ack = new Actions(driver);
-    @FindBy(id="pkb_contact")
+    @FindBy(id="contact")
     public WebElement contactField;
 	@FindBy(id="emailaddress1")
 	public WebElement emailField;
-	@FindBy(id="pkb_login")
+	@FindBy(id="login")
 	public WebElement loginField;
 
-	@FindBy(id="pkb_supplier")
+	@FindBy(id="supplier")
 	public WebElement accountField;
 	@FindBy(id="FormTitle")
 	public WebElement nameField;
 	@FindBy(id="adv_domain")
 	public WebElement domainField;
-    @FindBy(xpath="//*[@id='Uprawnienia klienta_label']")
+    @FindBy(xpath="//*[@id=']")
     private WebElement isClientAccess;
 
     public void contactFieldClick(){
