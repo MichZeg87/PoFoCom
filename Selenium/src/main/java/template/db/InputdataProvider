@@ -1,0 +1,73 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import strefa_klienta.utils.AbstractWebDriver;
+import strefa_klienta.utils.WyszukiwanieWartosci;
+import java.util.List;
+
+public class InputDataPreparer extends AbstractWebDriver {
+
+    public InputDataPreparer(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
+    }
+
+    ValueChecker values = new ValueChecker(driver, wait);
+    Actions ack = new Actions(driver);
+    @FindBy(id="pkb_contact")
+    public WebElement contactField;
+	@FindBy(id="emailaddress1")
+	public WebElement emailField;
+	@FindBy(id="pkb_login")
+	public WebElement loginField;
+
+	@FindBy(id="pkb_supplier")
+	public WebElement accountField;
+	@FindBy(id="FormTitle")
+	public WebElement nameField;
+	@FindBy(id="adv_domain")
+	public WebElement domainField;
+    @FindBy(xpath="//*[@id='Uprawnienia klienta_label']")
+    private WebElement isClientAccess;
+
+    public void contactFieldClick(){
+        ack.doubleClick(contactField).perform();
+    }
+
+    public void addInfoForInvitation(List<String> list) {
+        list.add(contactField.getText());
+        list.add(isClientAccess.getText());
+    }
+
+    public void addInfoFromContact(List<String> inputList) {
+        ack.doubleClick(contactField).perform();
+        wait.until(values.getLoadingCrm());
+        if (emailField !=null) {
+            inputList.add(emailField.getText());
+        } else if (loginField !=null) {
+            inputList.add(loginField.getText());
+        } else {
+            throw new NullPointerException("Brak wartości w polach email i login");
+        }
+    }
+
+    public void addFromAccount(List<String> inputList) {
+        getAccountName(inputList);
+        if(domainField == null) {
+            throw new NullPointerException("Brak wartości w polu Domena");
+        } else {
+            inputList.add(domainField.getText());
+        }
+    }
+
+    public void getAccountName(List<String> inputList){
+        ack.doubleClick(accountField).perform();
+        wait.until(wartosci.getLoadingCrm());
+        if(nameField.getText().equals("Nowy element Kontrahent")) {
+            throw new IllegalArgumentException("Brak nazwy Kontrahenta");
+        } else {
+            inputList.add(nameField.getText());
+        }
+    }
+}
