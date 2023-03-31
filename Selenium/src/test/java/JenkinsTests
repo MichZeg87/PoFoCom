@@ -1,0 +1,17 @@
+
+import org.junit.jupiter.api.Test;
+
+public class JenkinsTests {
+
+    @Test
+    void checkValueOfProperty() {
+        if(Boolean.parseBoolean(System.getProperty("boolean"))) {
+            System.out.println("bulean zwrucił true");
+        } else if(!Boolean.parseBoolean(System.getProperty("boolean"))){
+            System.out.println("bulean zwrócł false");
+        }
+        System.out.println("wartość string: "+ System.getProperty("string"));
+    }
+    
+    // jenkins goals clean -DfailNoTests=false -Dtest=JenkinsTests test -Dstring=${string} -Dboolean=${test} install
+}
