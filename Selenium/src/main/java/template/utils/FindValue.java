@@ -144,6 +144,7 @@ public class FindValue extends AbstractWebDriver {
                     }
                 } else if (cls == variables.col8 && !cellValue.isEmpty()) {
                     rowValue.get(rowNbr).add("pobierz");
+                    String newValue = rowValue.replaceAll("<[^>]*>", "");
                 } else if (rowValue.containsKey(rowNbr)) { // przypisanie wartości komórki do mapy
                     rowValue.get(rowNbr).add(cellValue);
                 } else {
